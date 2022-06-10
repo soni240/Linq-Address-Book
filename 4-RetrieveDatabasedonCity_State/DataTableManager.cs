@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _3_DeleteValueonDataTableBasedoName
+namespace _4_RetrieveDatabasedonCity_State
 {
     public class DataTableManager
     {
@@ -121,10 +120,10 @@ namespace _3_DeleteValueonDataTableBasedoName
             ContactDataManager contactDataManager = new ContactDataManager();
             ContactDataManager contactDataManagers = new ContactDataManager();
             //Insert Values into Table
-            contactDataManager.FirstName = "Shalini";
+            contactDataManager.FirstName = "Ankita";
             contactDataManager.LastName = "Venkatesh";
             contactDataManager.PhoneNumber = 9842905050;
-            contactDataManager.Email = "shalini@gmail.com";
+            contactDataManager.Email = "ankita@gmail.com";
             contactDataManager.Address = "4,B Block,Avadi";
             contactDataManager.City = "chennai";
             contactDataManager.State = "TN";
@@ -185,6 +184,19 @@ namespace _3_DeleteValueonDataTableBasedoName
                 return 1;
             }
             else return 0;
+        }
+        //Retrieve values from DataTable based on City or State
+        public string RetrieveBasedOnCityorState(string City, string State)
+        {
+            AddValues();
+            string nameList = "";
+            var modifiedList = (from ContactList in custTable.AsEnumerable() where (ContactList.Field<string>("State") == State || ContactList.Field<string>("City") == City) select ContactList);
+            foreach (var dtRows in modifiedList)
+            {
+                nameList += dtRows["FirstName"] + " ";
+                Console.WriteLine("{0} \t {1} \t {2} \t {3} \t {4} \t {5} \t {6} \t {7} \t {8}\n", dtRows["Contactid"], dtRows["FirstName"], dtRows["LastName"], dtRows["Address"], dtRows["City"], dtRows["State"], dtRows["Zip"], dtRows["PhoneNumber"], dtRows["Email"]);
+            }
+            return nameList;
         }
         //Display all Values in DataRow
         public void Display()

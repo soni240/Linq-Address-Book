@@ -1,7 +1,7 @@
-using _3_DeleteValueonDataTableBasedoName;
+using Linq_Address_Book;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ContactManagerTest3
+namespace ContactManagerTest4
 {
     [TestClass]
     public class UnitTest1
@@ -53,6 +53,23 @@ namespace ContactManagerTest3
         {
             int expected = 0;
             int actual = dataTableManger.DeleteRowInDataTable("lala");
+            Assert.AreEqual(actual, expected);
+        }
+        //Usecase 4: Retrieve values from DataTable based on City or State
+        [TestMethod]
+        [TestCategory("Retrieve Row in Data Table based on City ")]
+        public void GivenRetrieveQuery_BasedOnCityandState_returnString()
+        {
+            string expected = "Raksha";
+            string actual = dataTableManger.RetrieveBasedOnCityorState("Lucknow", "TN");
+            Assert.AreEqual(actual, expected);
+        }
+        [TestMethod]
+        [TestCategory("Retrieve Row in Data Table based on state ")]
+        public void GivenRetrieveQuery_BasedOnCityorState_returnString()
+        {
+            string expected = "Raksha Parthiban";
+            string actual = dataTableManger.RetrieveBasedOnCityorState("Lucknow", "UP");
             Assert.AreEqual(actual, expected);
         }
     }
