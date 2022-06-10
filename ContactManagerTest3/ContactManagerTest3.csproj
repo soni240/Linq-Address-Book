@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Linq_Address_Book\Linq_Address_Book.csproj" />
+    <ProjectReference Include="..\3-DeleteValueonDataTableBasedoName\3-DeleteValueonDataTableBasedoName.csproj" />
   </ItemGroup>
 
 </Project>

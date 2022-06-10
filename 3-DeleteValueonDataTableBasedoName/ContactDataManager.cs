@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linq_Address_Book
+namespace _3_DeleteValueonDataTableBasedoName
 {
     public class ContactDataManager
     {
