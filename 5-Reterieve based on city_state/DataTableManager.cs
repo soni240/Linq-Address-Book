@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _4_RetrieveDatabasedonCity_State
+namespace _5_Reterieve_based_on_city_state
 {
     public class DataTableManager
     {
@@ -120,10 +121,10 @@ namespace _4_RetrieveDatabasedonCity_State
             ContactDataManager contactDataManager = new ContactDataManager();
             ContactDataManager contactDataManagers = new ContactDataManager();
             //Insert Values into Table
-            contactDataManager.FirstName = "Ankita";
+            contactDataManager.FirstName = "Shalini";
             contactDataManager.LastName = "Venkatesh";
             contactDataManager.PhoneNumber = 9842905050;
-            contactDataManager.Email = "ankita@gmail.com";
+            contactDataManager.Email = "shalini@gmail.com";
             contactDataManager.Address = "4,B Block,Avadi";
             contactDataManager.City = "chennai";
             contactDataManager.State = "TN";
@@ -197,6 +198,24 @@ namespace _4_RetrieveDatabasedonCity_State
                 Console.WriteLine("{0} \t {1} \t {2} \t {3} \t {4} \t {5} \t {6} \t {7} \t {8}\n", dtRows["Contactid"], dtRows["FirstName"], dtRows["LastName"], dtRows["Address"], dtRows["City"], dtRows["State"], dtRows["Zip"], dtRows["PhoneNumber"], dtRows["Email"]);
             }
             return nameList;
+        }
+        //Retrieve Count values from DataTable based on City or State
+        public string RetrieveCountBasedOnCityorState()
+        {
+            AddValues();
+            string result = "";
+            var modifiedList = (from ContactList in custTable.AsEnumerable().GroupBy(r => new { Col1 = r["City"], Col2 = r["State"] }) select ContactList);
+            Console.WriteLine("Äfter count");
+            foreach (var j in modifiedList)
+            {
+                result += j.Count() + " ";
+                Console.WriteLine("Count Key" + j.Key);
+                foreach (var dtRows in j)
+                {
+                    Console.WriteLine("{0} \t {1} \t {2} \t {3} \t {4} \t {5} \t {6} \t {7} \t {8}\n", dtRows["Contactid"], dtRows["FirstName"], dtRows["LastName"], dtRows["Address"], dtRows["City"], dtRows["State"], dtRows["Zip"], dtRows["PhoneNumber"], dtRows["Email"]);
+                }
+            }
+            return result;
         }
         //Display all Values in DataRow
         public void Display()
