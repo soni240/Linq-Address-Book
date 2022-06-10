@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using _1_CreateandInsertinto_DataTable;
+using _2_ModifyDataTableBasedonName;
 
 Console.WriteLine("Welcome to LINQ AddressBookSystem!");
 //Create Object for DataTable
@@ -9,10 +9,10 @@ DataTableManager dataTableManger = new DataTableManager();
 dataTableManger.CreateDataTable();
 
 //Insert Values into Table
-contactDataManager.FirstName = "Ankita";
+contactDataManager.FirstName = "Shalini";
 contactDataManager.LastName = "Venkatesh";
 contactDataManager.PhoneNumber = 9842905050;
-contactDataManager.Email = "Ankita@gmail.com";
+contactDataManager.Email = "shalini@gmail.com";
 contactDataManager.Address = "4,B Block,Avadi";
 contactDataManager.City = "chennai";
 contactDataManager.State = "TN";
@@ -30,6 +30,9 @@ contactDataManagers.State = "TN";
 contactDataManagers.zip = 123001;
 dataTableManger.InsertintoDataTable(contactDataManagers);
 dataTableManger.Display();
+//Modify
+int varl = dataTableManger.EditDataTable("lalita", "Lastname");
+Console.WriteLine("Success" + varl);
         
     
 

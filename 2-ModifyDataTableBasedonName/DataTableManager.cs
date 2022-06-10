@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _1_CreateandInsertinto_DataTable
+namespace _2_ModifyDataTableBasedonName
 {
     public class DataTableManager
     {
@@ -159,6 +159,18 @@ namespace _1_CreateandInsertinto_DataTable
             dtRow["Email"] = contactDataManager.Email;
             custTable.Rows.Add(dtRow);
 
+        }
+        public int EditDataTable(string FirstName, string ColumnName)
+        {
+            AddValues();
+            var modifiedList = (from ContactList in custTable.AsEnumerable() where ContactList.Field<string>("FirstName") == FirstName select ContactList).FirstOrDefault();
+            if (modifiedList != null)
+            {
+                modifiedList[ColumnName] = "Sing";
+                Display();
+                return 1;
+            }
+            else return 0;
         }
         //Display all Values in DataRow
         public void Display()
