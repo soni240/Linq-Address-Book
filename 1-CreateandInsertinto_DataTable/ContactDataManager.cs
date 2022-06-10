@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linq_Address_Book
+namespace _1_CreateandInsertinto_DataTable
 {
     public class ContactDataManager
     {
