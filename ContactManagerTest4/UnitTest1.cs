@@ -1,12 +1,11 @@
 using Linq_Address_Book;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ContactManagerTesting
+namespace ContactManagerTest4
 {
     [TestClass]
     public class UnitTest1
     {
-        
         DataTableManager dataTableManger;
 
         [TestInitialize]
@@ -70,37 +69,9 @@ namespace ContactManagerTesting
         public void GivenRetrieveQuery_BasedOnCityorState_returnString()
         {
             string expected = "Raksha Parthiban";
-            string actual = dataTableManger.RetrieveBasedOnCityorState("chennai", "TN");
+            string actual = dataTableManger.RetrieveBasedOnCityorState("Lucknow", "UP");
             Assert.AreEqual(actual, expected);
         }
-        //Usecase 5: Retrieve count values from DataTable based on City or State
-        [TestMethod]
-        [TestCategory("Retrieve Row in Data Table based on City ")]
-        public void GivenRetrieveCountQuery_BasedOnCityandState_returnString()
-        {
-            string expected = "1 2";
-            string actual = dataTableManger.RetrieveCountBasedOnCityorState();
-            Assert.AreEqual(actual, expected);
-        }
-        //Usecase 6: Sort based on City
-        [TestMethod]
-        [TestCategory("Sort based on City")]
-        public void GivenSortQuery_BasedOnCityandState_returnString()
-        {
-            string expected = "Raksha Ankita ";
-            string actual = dataTableManger.SortBasedOnNameInDataTable("chennai");
-            Assert.AreEqual(actual, expected);
-        }
-        //Usecase 7: sort based  on Contact Type
-        [TestMethod]
-        [TestCategory("Sort based on Type")]
-        public void GivenCountQuery_BasedOnCityandState_returnString()
-        {
-            string expected = "1 1 1 ";
-            string actual = dataTableManger.RetrieveCountBasedOnType();
-            Assert.AreEqual(actual, expected);
-        }
-
     }
 }
 

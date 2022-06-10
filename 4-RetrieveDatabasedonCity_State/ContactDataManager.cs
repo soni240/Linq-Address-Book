@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linq_Address_Book
+namespace _4_RetrieveDatabasedonCity_State
 {
     public class ContactDataManager
     {
@@ -21,4 +21,5 @@ namespace Linq_Address_Book
         public string Type { get; set; }
     }
 }
+    
 
