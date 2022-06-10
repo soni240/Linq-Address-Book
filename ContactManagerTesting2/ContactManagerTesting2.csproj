@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Linq_Address_Book\Linq_Address_Book.csproj" />
+    <ProjectReference Include="..\2-ModifyDataTableBasedonName\2-ModifyDataTableBasedonName.csproj" />
   </ItemGroup>
 
 </Project>
