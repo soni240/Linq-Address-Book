@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\2-ModifyDataTableBasedonName\2-ModifyDataTableBasedonName.csproj" />
+    <ProjectReference Include="..\3-DeleteValueonDataTableBasedoName\3-DeleteValueonDataTableBasedoName.csproj" />
   </ItemGroup>
 
 </Project>

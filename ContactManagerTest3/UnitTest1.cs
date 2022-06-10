@@ -1,7 +1,7 @@
-using _2_ModifyDataTableBasedonName;
+using _3_DeleteValueonDataTableBasedoName;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ContactManagerTesting2
+namespace ContactManagerTest3
 {
     [TestClass]
     public class UnitTest1
@@ -36,6 +36,23 @@ namespace ContactManagerTesting2
         {
             int expected = 0;
             int actual = dataTableManger.EditDataTable("mam", "Lastname");
+            Assert.AreEqual(actual, expected);
+        }
+        //Usecase 3: Delete values in DataTable based on Name
+        [TestMethod]
+        [TestCategory("Delete Row in Data Table")]
+        public void GivenDeleteQuery_returnInteger()
+        {
+            int expected = 1;
+            int actual = dataTableManger.DeleteRowInDataTable("Raksha");
+            Assert.AreEqual(actual, expected);
+        }
+        [TestMethod]
+        [TestCategory("Delete Row in Data Table-Negative Test Case")]
+        public void GivenWrongDeleteQuery_returnInteger()
+        {
+            int expected = 0;
+            int actual = dataTableManger.DeleteRowInDataTable("lala");
             Assert.AreEqual(actual, expected);
         }
     }

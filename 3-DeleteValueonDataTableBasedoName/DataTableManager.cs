@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _2_ModifyDataTableBasedonName
+namespace _3_DeleteValueonDataTableBasedoName
 {
     public class DataTableManager
     {
@@ -167,6 +167,20 @@ namespace _2_ModifyDataTableBasedonName
             if (modifiedList != null)
             {
                 modifiedList[ColumnName] = "Sing";
+                Display();
+                return 1;
+            }
+            else return 0;
+        }
+        //Delete a row from DataTable based on Name
+        public int DeleteRowInDataTable(string FirstName)
+        {
+            AddValues();
+            var modifiedList = (from ContactList in custTable.AsEnumerable() where ContactList.Field<string>("FirstName") == FirstName select ContactList).FirstOrDefault();
+            if (modifiedList != null)
+            {
+                modifiedList.Delete();
+                Console.WriteLine("--- After Deletion ---");
                 Display();
                 return 1;
             }

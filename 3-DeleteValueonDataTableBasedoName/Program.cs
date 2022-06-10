@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using _2_ModifyDataTableBasedonName;
+using _3_DeleteValueonDataTableBasedoName;
 
 Console.WriteLine("Welcome to LINQ AddressBookSystem!");
 //Create Object for DataTable
@@ -32,6 +32,9 @@ dataTableManger.InsertintoDataTable(contactDataManagers);
 dataTableManger.Display();
 //Modify
 int varl = dataTableManger.EditDataTable("lalita", "Lastname");
+Console.WriteLine("Success" + varl);
+//Delete
+int var2 = dataTableManger.DeleteRowInDataTable("lalita");
 Console.WriteLine("Success" + varl);
         
     
