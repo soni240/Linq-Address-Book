@@ -1,6 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
-using Linq_Address_Book;
+using _6_Sort_based_on_City;
 
 Console.WriteLine("Welcome to LINQ AddressBookSystem!");
 //Create Object for DataTable
@@ -10,7 +9,7 @@ DataTableManager dataTableManger = new DataTableManager();
 dataTableManger.CreateDataTable();
 
 //Insert Values into Table
-contactDataManager.FirstName = "Shalini";
+contactDataManager.FirstName = "shalini";
 contactDataManager.LastName = "Venkatesh";
 contactDataManager.PhoneNumber = 9842905050;
 contactDataManager.Email = "shalini@gmail.com";
@@ -48,4 +47,5 @@ string var5 = dataTableManger.SortBasedOnNameInDataTable("chennai");
 Console.WriteLine("Success" + varl);
         
     
+
 
