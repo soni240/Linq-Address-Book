@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linq_Address_Book
+namespace _7_Sort_based_on_Type
 {
     public class ContactDataManager
     {

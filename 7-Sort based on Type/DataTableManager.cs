@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linq_Address_Book
+namespace _7_Sort_based_on_Type
 {
     public class DataTableManager
     {
@@ -121,15 +121,14 @@ namespace Linq_Address_Book
             ContactDataManager contactDataManager = new ContactDataManager();
             ContactDataManager contactDataManagers = new ContactDataManager();
             //Insert Values into Table
-            contactDataManager.FirstName = "Ankita";
+            contactDataManager.FirstName = "Shalini";
             contactDataManager.LastName = "Venkatesh";
             contactDataManager.PhoneNumber = 9842905050;
-            contactDataManager.Email = "Ankita@gmail.com";
+            contactDataManager.Email = "shalini@gmail.com";
             contactDataManager.Address = "4,B Block,Avadi";
             contactDataManager.City = "chennai";
             contactDataManager.State = "TN";
             contactDataManager.zip = 600072;
-            contactDataManager.Type = "Friends";
             InsertintoDataTable(contactDataManager);
 
             //Insert Values into Table
@@ -141,17 +140,6 @@ namespace Linq_Address_Book
             contactDataManagers.City = "chennai";
             contactDataManagers.State = "TN";
             contactDataManagers.zip = 123001;
-            contactDataManager.Type = "Family";
-            InsertintoDataTable(contactDataManagers);
-            contactDataManagers.FirstName = "Raksha";
-            contactDataManagers.LastName = "Parthiban";
-            contactDataManagers.PhoneNumber = 7742905050;
-            contactDataManagers.Email = "raksha@gmail.com";
-            contactDataManagers.Address = "Sasthri street,ambattur";
-            contactDataManagers.City = "chennai";
-            contactDataManagers.State = "TN";
-            contactDataManagers.zip = 123001;
-            contactDataManager.Type = "Fam";
             InsertintoDataTable(contactDataManagers);
 
             return custTable.Rows.Count;
