@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\4-RetrieveDatabasedonCity_State\4-RetrieveDatabasedonCity_State.csproj" />
+    <ProjectReference Include="..\Linq_Address_Book\Linq_Address_Book.csproj" />
   </ItemGroup>
 
 </Project>

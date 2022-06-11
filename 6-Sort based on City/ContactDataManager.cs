@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _5_Reterieve_based_on_city_state
+namespace _6_Sort_based_on_City
 {
     public class ContactDataManager
     {
@@ -21,6 +21,4 @@ namespace _5_Reterieve_based_on_city_state
         public string Type { get; set; }
     }
 }
-
-    
 

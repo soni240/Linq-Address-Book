@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using _5_Reterieve_based_on_city_state;
+using _6_Sort_based_on_City;
 
 Console.WriteLine("Welcome to LINQ AddressBookSystem!");
 //Create Object for DataTable
@@ -9,7 +9,7 @@ DataTableManager dataTableManger = new DataTableManager();
 dataTableManger.CreateDataTable();
 
 //Insert Values into Table
-contactDataManager.FirstName = "Ankita";
+contactDataManager.FirstName = "shalini";
 contactDataManager.LastName = "Venkatesh";
 contactDataManager.PhoneNumber = 9842905050;
 contactDataManager.Email = "shalini@gmail.com";
@@ -41,6 +41,9 @@ string var3 = dataTableManger.RetrieveBasedOnCityorState("Bareilly", "UP");
 Console.WriteLine("Success" + varl);
 //count based on city or state
 string var4 = dataTableManger.RetrieveCountBasedOnCityorState();
+Console.WriteLine("Success" + varl);
+//sort based on name in data table
+string var5 = dataTableManger.SortBasedOnNameInDataTable("chennai");
 Console.WriteLine("Success" + varl);
         
     
