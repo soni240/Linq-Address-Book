@@ -1,7 +1,7 @@
 using Linq_Address_Book;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ContactManagerTesting6
+namespace ContactManagerTest7
 {
     [TestClass]
     public class UnitTest1
@@ -88,6 +88,15 @@ namespace ContactManagerTesting6
         {
             string expected = "Raksha Shalini ";
             string actual = dataTableManger.SortBasedOnNameInDataTable("chennai");
+            Assert.AreEqual(actual, expected);
+        }
+        //Usecase 7: sort based  on Contact Type
+        [TestMethod]
+        [TestCategory("Sort based on Type")]
+        public void GivenCountQuery_BasedOnCityandState_returnString()
+        {
+            string expected = "1 1 1 ";
+            string actual = dataTableManger.RetrieveCountBasedOnType();
             Assert.AreEqual(actual, expected);
         }
 

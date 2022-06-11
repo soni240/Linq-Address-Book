@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _6_Sort_based_on_City
+namespace _7_Sort_based_on_Type
 {
     public class DataTableManager
     {
@@ -229,6 +229,24 @@ namespace _6_Sort_based_on_City
                 result += dtRows["FirstName"] + " ";
                 Console.WriteLine("{0} \t {1} \t {2} \t {3} \t {4} \t {5} \t {6} \t {7} \t {8}\n", dtRows["Contactid"], dtRows["FirstName"], dtRows["LastName"], dtRows["Address"], dtRows["City"], dtRows["State"], dtRows["Zip"], dtRows["PhoneNumber"], dtRows["Email"]);
 
+            }
+            return result;
+        }
+        //Retrieve Count values from DataTable based on City or State
+        public string RetrieveCountBasedOnType()
+        {
+            AddValues();
+            string result = "";
+            var modifiedList = (from ContactList in custTable.AsEnumerable().GroupBy(r => new { Col1 = r["ContactType"] }) select ContactList);
+            Console.WriteLine("Äfter count");
+            foreach (var j in modifiedList)
+            {
+                result += j.Count() + " ";
+                Console.WriteLine("Count Key" + j.Key);
+                foreach (var dtRows in j)
+                {
+                    Console.WriteLine("{0} \t {1} \t {2} \t {3} \t {4} \t {5} \t {6} \t {7} \t {8} \t {9}\n", dtRows["Contactid"], dtRows["FirstName"], dtRows["LastName"], dtRows["Address"], dtRows["City"], dtRows["State"], dtRows["Zip"], dtRows["PhoneNumber"], dtRows["Email"], dtRows["ContactType"]);
+                }
             }
             return result;
         }
