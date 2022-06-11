@@ -3,9 +3,13 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net6.0</TargetFramework>
-    <RootNamespace>_7_Sort_based_on_Type</RootNamespace>
+    <RootNamespace>_8_Add_Duplicate_Value</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Linq_Address_Book\Linq_Address_Book.csproj" />
+  </ItemGroup>
 
 </Project>

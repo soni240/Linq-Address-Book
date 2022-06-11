@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using _7_Sort_based_on_Type;
+using Linq_Address_Book;
 
 Console.WriteLine("Welcome to LINQ AddressBookSystem!");
 //Create Object for DataTable
@@ -47,5 +47,6 @@ string var5 = dataTableManger.SortBasedOnNameInDataTable("chennai");
 Console.WriteLine("Success" + varl);
         
     
+
 
 

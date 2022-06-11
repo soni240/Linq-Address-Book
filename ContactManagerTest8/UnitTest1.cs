@@ -1,7 +1,7 @@
 using Linq_Address_Book;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace ContactManagerTest7
+namespace ContactManagerTest8
 {
     [TestClass]
     public class UnitTest1
