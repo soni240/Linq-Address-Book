@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Linq_Address_Book;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linq_Address_Book
+namespace _8_Add_Duplicate_Value
 {
     public class DataTableManager
     {
@@ -121,10 +122,10 @@ namespace Linq_Address_Book
             ContactDataManager contactDataManager = new ContactDataManager();
             ContactDataManager contactDataManagers = new ContactDataManager();
             //Insert Values into Table
-            contactDataManager.FirstName = "Ankita";
+            contactDataManager.FirstName = "Shalini";
             contactDataManager.LastName = "Venkatesh";
             contactDataManager.PhoneNumber = 9842905050;
-            contactDataManager.Email = "Ankita@gmail.com";
+            contactDataManager.Email = "shalini@gmail.com";
             contactDataManager.Address = "4,B Block,Avadi";
             contactDataManager.City = "chennai";
             contactDataManager.State = "TN";
@@ -274,4 +275,3 @@ namespace Linq_Address_Book
 }
 
     
-

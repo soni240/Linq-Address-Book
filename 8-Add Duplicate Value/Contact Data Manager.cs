@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Linq_Address_Book
+namespace _8_Add_Duplicate_Value
 {
-    public class ContactDataManager
+    public class Contact_Data_Manager
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
